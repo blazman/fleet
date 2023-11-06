@@ -6205,7 +6205,7 @@ func (s *integrationTestSuite) TestHostsReportDownload() {
 	res.Body.Close()
 	require.NoError(t, err)
 	require.Len(t, rows, len(hosts)+1) // all hosts + header row
-	require.Len(t, rows[0], 48)        // total number of cols
+	require.Len(t, rows[0], 49)        // total number of cols
 
 	const (
 		idCol       = 3
@@ -7908,7 +7908,7 @@ func (s *integrationTestSuite) TestHostsReportWithPolicyResults() {
 	res.Body.Close()
 	require.NoError(t, err)
 	require.Len(t, rows1, len(hosts)+1) // all hosts + header row
-	require.Len(t, rows1[0], 48)        // total number of cols
+	require.Len(t, rows1[0], 49)        // total number of cols
 
 	var (
 		idIdx     int
@@ -7935,7 +7935,7 @@ func (s *integrationTestSuite) TestHostsReportWithPolicyResults() {
 	res.Body.Close()
 	require.NoError(t, err)
 	require.Len(t, rows2, len(hosts)+1) // all hosts + header row
-	require.Len(t, rows2[0], 48)        // total number of cols
+	require.Len(t, rows2[0], 49)        // total number of cols
 
 	// Check that all hosts have 0 issues and that they match the previous call to `/hosts/report`.
 	for i := 1; i < len(hosts)+1; i++ {
