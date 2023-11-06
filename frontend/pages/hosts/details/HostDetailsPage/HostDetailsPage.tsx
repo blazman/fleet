@@ -360,8 +360,9 @@ const HostDetailsPage = ({
     };
 
     // e.g., Rachel's Macbook Pro schedule details | Fleet for osquery
-    document.title = `Host ${hostTab()} details ${host?.display_name ? `| ${host?.display_name} |` : "|"
-      } Fleet for osquery`;
+    document.title = `Host ${hostTab()} details ${
+      host?.display_name ? `| ${host?.display_name} |` : "|"
+    } Fleet for osquery`;
   }, [location.pathname, host]);
 
   // Used for back to software pathname
@@ -400,7 +401,7 @@ const HostDetailsPage = ({
       "geolocation",
       "batteries",
       "detail_updated_at",
-      "last_restarted"
+      "last_restarted",
     ])
   );
 
@@ -499,7 +500,7 @@ const HostDetailsPage = ({
     setSelectedQueryTargetsByType(DEFAULT_TARGETS_BY_TYPE);
     router.push(
       PATHS.EDIT_QUERY(selectedQuery.id) +
-      TAGGED_TEMPLATES.queryByHostRoute(host?.id)
+        TAGGED_TEMPLATES.queryByHostRoute(host?.id)
     );
   };
 
