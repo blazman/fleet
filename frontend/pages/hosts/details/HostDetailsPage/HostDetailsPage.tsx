@@ -401,7 +401,7 @@ const HostDetailsPage = ({
       "geolocation",
       "batteries",
       "detail_updated_at",
-      "last_restarted",
+      "last_restarted_at",
     ])
   );
 
